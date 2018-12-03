@@ -471,7 +471,7 @@ emit_restart (working_state * state, int restart_num)
 /*
  * Encode and output one MCU's worth of Huffman-compressed coefficients.
  */
-
+#pragma GCC target("thumb")
 METHODDEF(boolean)
 encode_mcu_huff (j_compress_ptr cinfo, JBLOCKROW *MCU_data)
 {
