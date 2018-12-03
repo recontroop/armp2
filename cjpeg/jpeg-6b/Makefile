@@ -23,7 +23,7 @@ mandir = $(prefix)/man/man$(manext)
 CC= arm-linux-gnueabihf-gcc-6
 
 # You may need to adjust these cc options:
-CFLAGS= -O2  -I$(srcdir) -pg
+CFLAGS= -O2  -I$(srcdir) -pg -marm
 # Generally, we recommend defining any configuration symbols in jconfig.h,
 # NOT via -D switches here.
 # However, any special defines for ansi2knr.c may be included here:
