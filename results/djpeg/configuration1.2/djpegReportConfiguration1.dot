@@ -1,0 +1,13 @@
+digraph {
+	graph [fontname=Arial, nodesep=0.125, ranksep=0.25];
+	node [fontcolor=white, fontname=Arial, height=0, shape=box, style=filled, width=0];
+	edge [fontname=Arial];
+	1 [color="#53c408", fontcolor="#ffffff", fontsize="10.00", label="emit_restart\n59.93%\n(20.00%)\n288×"];
+	1 -> 1 [arrowsize="0.77", color="#53c408", fontcolor="#53c408", fontsize="10.00", label="288×", labeldistance="2.40", penwidth="2.40"];
+	1 -> 2 [arrowsize="0.63", color="#0ba84a", fontcolor="#0ba84a", fontsize="10.00", label="39.93%\n576×", labeldistance="1.60", penwidth="1.60"];
+	2 [color="#0ba84a", fontcolor="#ffffff", fontsize="10.00", label="encode_mcu_DC_first\n40.00%\n(40.00%)\n577×"];
+	3 [color="#0c738d", fontcolor="#ffffff", fontsize="10.00", label="jpeg_gen_optimal_table\n20.00%\n(20.00%)\n9504×"];
+	4 [color="#0c738d", fontcolor="#ffffff", fontsize="10.00", label="finish_pass_gather\n20.00%\n(20.00%)"];
+	5 [color="#0c738d", fontcolor="#ffffff", fontsize="10.00", label="jinit_downsampler\n20.00%\n(0.00%)"];
+	5 -> 3 [arrowsize="0.45", color="#0c738d", fontcolor="#0c738d", fontsize="10.00", label="20.00%\n9504×", labeldistance="0.80", penwidth="0.80"];
+}
