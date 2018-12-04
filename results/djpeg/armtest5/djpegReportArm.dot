@@ -1,0 +1,21 @@
+digraph {
+	graph [fontname=Arial, nodesep=0.125, ranksep=0.25];
+	node [fontcolor=white, fontname=Arial, height=0, shape=box, style=filled, width=0];
+	edge [fontname=Arial];
+	1 [color="#0ba458", fontcolor="#ffffff", fontsize="10.00", label="encode_mcu_AC_refine\n37.50%\n(25.00%)\n578×"];
+	1 -> 5 [arrowsize="0.35", color="#0d4883", fontcolor="#0d4883", fontsize="10.00", label="12.50%\n1×", labeldistance="0.50", penwidth="0.50"];
+	2 [color="#0ba458", fontcolor="#ffffff", fontsize="10.00", label="encode_mcu_DC_first\n37.37%\n(0.00%)\n865×"];
+	2 -> 1 [arrowsize="0.61", color="#0ba458", fontcolor="#0ba458", fontsize="10.00", label="37.37%\n576×", labeldistance="1.49", penwidth="1.49"];
+	2 -> 2 [arrowsize="0.61", color="#0ba458", fontcolor="#0ba458", fontsize="10.00", label="288×", labeldistance="1.49", penwidth="1.49"];
+	3 [color="#0b9e70", fontcolor="#ffffff", fontsize="10.00", label="int_downsample\n32.77%\n(0.00%)"];
+	3 -> 2 [arrowsize="0.57", color="#0b9e70", fontcolor="#0b9e70", fontsize="10.00", label="32.77%\n506×", labeldistance="1.31", penwidth="1.31"];
+	4 [color="#0c9393", fontcolor="#ffffff", fontsize="10.00", label="jpeg_gen_optimal_table\n25.00%\n(25.00%)\n9504×"];
+	5 [color="#0c9393", fontcolor="#ffffff", fontsize="10.00", label="encode_mcu_AC_first\n25.00%\n(25.00%)\n2×"];
+	6 [color="#0c9393", fontcolor="#ffffff", fontsize="10.00", label="compress_output\n25.00%\n(25.00%)"];
+	7 [color="#0c9393", fontcolor="#ffffff", fontsize="10.00", label="jinit_downsampler\n25.00%\n(0.00%)"];
+	7 -> 4 [arrowsize="0.50", color="#0c9393", fontcolor="#0c9393", fontsize="10.00", label="25.00%\n9504×", labeldistance="1.00", penwidth="1.00"];
+	8 [color="#0d4883", fontcolor="#ffffff", fontsize="10.00", label="add_huff_table\n12.56%\n(0.00%)"];
+	8 -> 5 [arrowsize="0.35", color="#0d4883", fontcolor="#0d4883", fontsize="10.00", label="12.50%\n1×", labeldistance="0.50", penwidth="0.50"];
+	9 [color="#0d2079", fontcolor="#ffffff", fontsize="10.00", label="sep_downsample\n4.53%\n(0.00%)"];
+	9 -> 2 [arrowsize="0.35", color="#0d2079", fontcolor="#0d2079", fontsize="10.00", label="4.53%\n70×", labeldistance="0.50", penwidth="0.50"];
+}

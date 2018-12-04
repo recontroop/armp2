@@ -1,0 +1,14 @@
+digraph {
+	graph [fontname=Arial, nodesep=0.125, ranksep=0.25];
+	node [fontcolor=white, fontname=Arial, height=0, shape=box, style=filled, width=0];
+	edge [fontname=Arial];
+	1 [color="#8bcd07", fontcolor="#ffffff", fontsize="10.00", label="encode_mcu_DC_first\n66.67%\n(0.00%)\n865×"];
+	1 -> 1 [arrowsize="0.82", color="#8bcd07", fontcolor="#8bcd07", fontsize="10.00", label="288×", labeldistance="2.67", penwidth="2.67"];
+	1 -> 2 [arrowsize="0.82", color="#8bcd07", fontcolor="#8bcd07", fontsize="10.00", label="66.67%\n576×", labeldistance="2.67", penwidth="2.67"];
+	2 [color="#8bcd07", fontcolor="#ffffff", fontsize="10.00", label="encode_mcu_DC_refine\n66.67%\n(66.67%)\n576×"];
+	3 [color="#47c208", fontcolor="#ffffff", fontsize="10.00", label="int_downsample\n58.46%\n(0.00%)"];
+	3 -> 1 [arrowsize="0.76", color="#47c208", fontcolor="#47c208", fontsize="10.00", label="58.46%\n506×", labeldistance="2.34", penwidth="2.34"];
+	4 [color="#0b9f6e", fontcolor="#ffffff", fontsize="10.00", label="finish_pass_gather\n33.33%\n(33.33%)"];
+	5 [color="#0d317d", fontcolor="#ffffff", fontsize="10.00", label="sep_downsample\n8.09%\n(0.00%)"];
+	5 -> 1 [arrowsize="0.35", color="#0d317d", fontcolor="#0d317d", fontsize="10.00", label="8.09%\n70×", labeldistance="0.50", penwidth="0.50"];
+}
