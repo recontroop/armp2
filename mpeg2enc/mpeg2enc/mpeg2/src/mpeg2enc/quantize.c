@@ -85,7 +85,7 @@ int mquant;
 
   return 1;
 }
-
+#pragma GCC target("thumb")
 int quant_non_intra(src,dst,quant_mat,mquant)
 short *src, *dst;
 unsigned char *quant_mat;
@@ -145,7 +145,7 @@ int mquant;
       dst[63]^= 1;
   }
 }
-
+#pragma GCC target("arm")
 void iquant_non_intra(src,dst,quant_mat,mquant)
 short *src, *dst;
 unsigned char *quant_mat;

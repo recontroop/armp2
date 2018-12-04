@@ -37,7 +37,7 @@ static void add_pred _ANSI_ARGS_((unsigned char *pred, unsigned char *cur,
   int lx, short *blk));
 static void sub_pred _ANSI_ARGS_((unsigned char *pred, unsigned char *cur,
   int lx, short *blk));
-
+#pragma GCC target("thumb")
 /* subtract prediction and transform prediction error */
 void transform(pred,cur,mbi,blocks)
 unsigned char *pred[], *cur[];
@@ -106,7 +106,6 @@ short blocks[][64];
       k++;
     }
 }
-
 /* inverse transform prediction error and add prediction */
 void itransform(pred,cur,mbi,blocks)
 unsigned char *pred[],*cur[];
@@ -177,6 +176,7 @@ short blocks[][64];
     }
 }
 
+#pragma GCC target("arm")
 /* add prediction and prediction error, saturate to 0...255 */
 static void add_pred(pred,cur,lx,blk)
 unsigned char *pred, *cur;
