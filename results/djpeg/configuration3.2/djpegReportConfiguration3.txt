@@ -1,0 +1,452 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+ 40.00      0.02     0.02      577     0.03     0.03  encode_mcu_DC_first
+ 40.00      0.04     0.02        2    10.00    10.00  encode_mcu_AC_first
+ 20.00      0.05     0.01                             finish_pass_gather
+  0.00      0.05     0.00     9504     0.00     0.00  jpeg_gen_optimal_table
+  0.00      0.05     0.00     4081     0.00     0.00  jinit_c_prep_controller
+  0.00      0.05     0.00     1613     0.00     0.00  alloc_large
+  0.00      0.05     0.00     1584     0.00     0.00  start_pass_coef
+  0.00      0.05     0.00      577     0.00     0.00  emit_eobrun
+  0.00      0.05     0.00      577     0.00     0.00  encode_mcu_DC_refine
+  0.00      0.05     0.00      576     0.00     0.00  jinit_color_converter
+  0.00      0.05     0.00       95     0.00     0.00  start_input_bmp
+  0.00      0.05     0.00       45     0.00     0.00  realize_virt_arrays
+  0.00      0.05     0.00       36     0.00     0.00  fullsize_downsample
+  0.00      0.05     0.00       27     0.00     0.00  alloc_barray
+  0.00      0.05     0.00       22     0.00     0.00  _fini
+  0.00      0.05     0.00       15     0.00     0.00  validate_script
+  0.00      0.05     0.00        7     0.00     0.00  access_virt_barray
+  0.00      0.05     0.00        6     0.00     0.00  __aeabi_uidiv
+  0.00      0.05     0.00        6     0.00     0.00  jpeg_free_large
+  0.00      0.05     0.00        6     0.00     0.00  pre_process_data
+  0.00      0.05     0.00        6     0.00     0.00  set_quant_slots
+  0.00      0.05     0.00        5     0.00     0.00  encode_mcu_huff
+  0.00      0.05     0.00        3     0.00     0.00  access_virt_sarray
+  0.00      0.05     0.00        3     0.00     0.00  jpeg_CreateCompress
+  0.00      0.05     0.00        2     0.00     0.00  jpeg_add_quant_table
+  0.00      0.05     0.00        2     0.00     0.00  jpeg_destroy_compress
+  0.00      0.05     0.00        2     0.00     0.00  jpeg_set_colorspace
+  0.00      0.05     0.00        2     0.00     0.00  jpeg_set_defaults
+  0.00      0.05     0.00        2     0.00     0.00  per_scan_setup
+  0.00      0.05     0.00        1     0.00     0.00  __libc_csu_init
+  0.00      0.05     0.00        1     0.00     0.00  compress_first_pass
+  0.00      0.05     0.00        1     0.00     0.00  fill_dc_scans
+  0.00      0.05     0.00        1     0.00     0.00  fullsize_smooth_downsample
+  0.00      0.05     0.00        1     0.00     0.00  h2v1_downsample
+  0.00      0.05     0.00        1     0.00     0.00  h2v2_downsample
+  0.00      0.05     0.00        1     0.00     0.00  h2v2_smooth_downsample
+  0.00      0.05     0.00        1     0.00     0.00  jinit_memory_mgr
+  0.00      0.05     0.00        1     0.00     0.00  jpeg_start_compress
+  0.00      0.05     0.00        1     0.00     0.00  pre_process_context
+  0.00      0.05     0.00        1     0.00     0.00  process_data_simple_main
+  0.00      0.05     0.00        1     0.00     0.00  set_sample_factors
+  0.00      0.05     0.00        1     0.00     0.00  term_destination
+  0.00      0.05     0.00        1     0.00     0.00  write_scan_header
+  0.00      0.05     0.00        1     0.00     0.00  write_stdout
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 2 byte(s) for 20.00% of 0.05 seconds
+
+index % time    self  children    called     name
+                0.00    0.00       1/577         add_huff_table [4]
+                0.02    0.00     576/577         emit_restart [3]
+[1]     40.0    0.02    0.00     577         encode_mcu_DC_first [1]
+                0.00    0.00       1/45          realize_virt_arrays [15]
+-----------------------------------------------
+                0.01    0.00       1/2           keymatch [6]
+                0.01    0.00       1/2           add_huff_table [4]
+[2]     40.0    0.02    0.00       2         encode_mcu_AC_first [2]
+                0.00    0.00       1/45          realize_virt_arrays [15]
+                0.00    0.00       1/577         encode_mcu_DC_refine [12]
+-----------------------------------------------
+                                 288             emit_restart [3]
+[3]     39.9    0.00    0.02       0+288     emit_restart [3]
+                0.02    0.00     576/577         encode_mcu_DC_first [1]
+                0.00    0.00     576/577         encode_mcu_DC_refine [12]
+                                 288             emit_restart [3]
+-----------------------------------------------
+                                                 <spontaneous>
+[4]     20.1    0.00    0.01                 add_huff_table [4]
+                0.01    0.00       1/2           encode_mcu_AC_first [2]
+                0.00    0.00       1/577         encode_mcu_DC_first [1]
+                0.00    0.00       2/5           encode_mcu_huff [23]
+-----------------------------------------------
+                                                 <spontaneous>
+[5]     20.0    0.01    0.00                 finish_pass_gather [5]
+-----------------------------------------------
+                                                 <spontaneous>
+[6]     20.0    0.00    0.01                 keymatch [6]
+                0.01    0.00       1/2           encode_mcu_AC_first [2]
+-----------------------------------------------
+                0.00    0.00    9504/9504        jinit_downsampler [103]
+[7]      0.0    0.00    0.00    9504         jpeg_gen_optimal_table [7]
+-----------------------------------------------
+                                  13             jinit_c_prep_controller [8]
+                0.00    0.00     106/4081        compress_output [51]
+                0.00    0.00    3975/4081        compress_first_pass [31]
+[8]      0.0    0.00    0.00    4081+13      jinit_c_prep_controller [8]
+                0.00    0.00       3/6           set_quant_slots [22]
+                                  13             jinit_c_prep_controller [8]
+-----------------------------------------------
+                0.00    0.00       2/1613        jpeg_add_quant_table [26]
+                0.00    0.00       2/1613        encode_mcu_DC_refine [12]
+                0.00    0.00       6/1613        jpeg_default_colorspace [116]
+                0.00    0.00       7/1613        jpeg_set_defaults [29]
+                0.00    0.00      12/1613        jpeg_finish_compress [121]
+                0.00    0.00    1584/1613        jinit_downsampler [103]
+[9]      0.0    0.00    0.00    1613         alloc_large [9]
+                0.00    0.00       4/45          realize_virt_arrays [15]
+-----------------------------------------------
+                0.00    0.00    1584/1584        jinit_downsampler [103]
+[10]     0.0    0.00    0.00    1584         start_pass_coef [10]
+-----------------------------------------------
+                0.00    0.00       1/577         set_sample_factors [41]
+                0.00    0.00      70/577         sep_downsample [171]
+                0.00    0.00     506/577         int_downsample [95]
+[11]     0.0    0.00    0.00     577         emit_eobrun [11]
+-----------------------------------------------
+                0.00    0.00       1/577         encode_mcu_AC_first [2]
+                0.00    0.00     576/577         emit_restart [3]
+[12]     0.0    0.00    0.00     577         encode_mcu_DC_refine [12]
+                0.00    0.00       4/45          realize_virt_arrays [15]
+                0.00    0.00       2/1613        alloc_large [9]
+                0.00    0.00       2/6           __aeabi_uidiv [189]
+-----------------------------------------------
+                0.00    0.00     576/576         read_scan_script [159]
+[13]     0.0    0.00    0.00     576         jinit_color_converter [13]
+-----------------------------------------------
+                0.00    0.00       1/95          text_getc [180]
+                0.00    0.00      94/95          parse_switches.constprop.0 [149]
+[14]     0.0    0.00    0.00      95         start_input_bmp [14]
+                0.00    0.00       1/1           __libc_csu_init [190]
+                0.00    0.00       1/1           process_data_simple_main [40]
+                0.00    0.00       1/2           jpeg_set_defaults [29]
+                0.00    0.00       1/2           jpeg_add_quant_table [26]
+                0.00    0.00       1/6           set_quant_slots [22]
+                0.00    0.00       1/2           jpeg_set_colorspace [28]
+-----------------------------------------------
+                0.00    0.00       1/45          jpeg_set_defaults [29]
+                0.00    0.00       1/45          term_destination [42]
+                0.00    0.00       1/45          process_data_simple_main [40]
+                0.00    0.00       1/45          compress_first_pass [31]
+                0.00    0.00       1/45          h2v2_downsample [35]
+                0.00    0.00       1/45          encode_mcu_DC_first [1]
+                0.00    0.00       1/45          encode_mcu_AC_first [2]
+                0.00    0.00       2/45          parse_switches.constprop.0 [149]
+                0.00    0.00       2/45          set_sample_factors [41]
+                0.00    0.00       2/45          jpeg_write_scanlines [141]
+                0.00    0.00       2/45          access_virt_barray [19]
+                0.00    0.00       3/45          jpeg_set_colorspace [28]
+                0.00    0.00       4/45          pre_process_data [21]
+                0.00    0.00       4/45          h2v2_smooth_downsample [36]
+                0.00    0.00       4/45          encode_mcu_DC_refine [12]
+                0.00    0.00       4/45          alloc_large [9]
+                0.00    0.00       5/45          __aeabi_uidiv [189]
+                0.00    0.00       6/45          encode_mcu_huff [23]
+[15]     0.0    0.00    0.00      45         realize_virt_arrays [15]
+-----------------------------------------------
+                0.00    0.00      36/36          sep_downsample [171]
+[16]     0.0    0.00    0.00      36         fullsize_downsample [16]
+-----------------------------------------------
+                0.00    0.00       1/27          jpeg_add_quant_table [26]
+                0.00    0.00       2/27          emit_dht [58]
+                0.00    0.00       3/27          jinit_c_master_control [101]
+                0.00    0.00       4/27          jpeg_simple_progression [133]
+                0.00    0.00       4/27          prepare_for_pass [153]
+                0.00    0.00      13/27          validate_script [18]
+[17]     0.0    0.00    0.00      27         alloc_barray [17]
+-----------------------------------------------
+                0.00    0.00       1/15          jpeg_add_quant_table [26]
+                0.00    0.00       4/15          jinit_c_master_control [101]
+                0.00    0.00      10/15          select_scan_parameters [169]
+[18]     0.0    0.00    0.00      15         validate_script [18]
+                0.00    0.00      13/27          alloc_barray [17]
+-----------------------------------------------
+                0.00    0.00       1/7           read_scan_integer [158]
+                0.00    0.00       2/7           write_frame_header [184]
+                0.00    0.00       4/7           per_scan_setup [30]
+[19]     0.0    0.00    0.00       7         access_virt_barray [19]
+                0.00    0.00       2/45          realize_virt_arrays [15]
+                0.00    0.00       1/3           access_virt_sarray [24]
+                0.00    0.00       1/22          _fini [188]
+                0.00    0.00       1/1           jinit_memory_mgr [37]
+-----------------------------------------------
+                0.00    0.00       1/6           encode_mcu_huff [23]
+                0.00    0.00       5/6           __aeabi_uidiv [189]
+[20]     0.0    0.00    0.00       6         jpeg_free_large [20]
+-----------------------------------------------
+                0.00    0.00       6/6           pre_process_context [39]
+[21]     0.0    0.00    0.00       6         pre_process_data [21]
+                0.00    0.00       4/45          realize_virt_arrays [15]
+-----------------------------------------------
+                0.00    0.00       1/6           start_input_bmp [14]
+                0.00    0.00       1/6           read_scan_integer [158]
+                0.00    0.00       1/6           jinit_c_master_control [101]
+                0.00    0.00       3/6           jinit_c_prep_controller [8]
+[22]     0.0    0.00    0.00       6         set_quant_slots [22]
+-----------------------------------------------
+                0.00    0.00       1/5           jpeg_write_raw_data [140]
+                0.00    0.00       2/5           set_sample_factors [41]
+                0.00    0.00       2/5           add_huff_table [4]
+[23]     0.0    0.00    0.00       5         encode_mcu_huff [23]
+                0.00    0.00       6/45          realize_virt_arrays [15]
+                0.00    0.00       1/6           jpeg_free_large [20]
+-----------------------------------------------
+                0.00    0.00       1/3           access_virt_barray [19]
+                0.00    0.00       2/3           jinit_memory_mgr [37]
+[24]     0.0    0.00    0.00       3         access_virt_sarray [24]
+                0.00    0.00      12/22          _fini [188]
+-----------------------------------------------
+                0.00    0.00       1/3           jpeg_write_scanlines [141]
+                0.00    0.00       2/3           jpeg_write_marker [139]
+[25]     0.0    0.00    0.00       3         jpeg_CreateCompress [25]
+-----------------------------------------------
+                0.00    0.00       1/2           start_input_bmp [14]
+                0.00    0.00       1/2           jpeg_write_raw_data [140]
+[26]     0.0    0.00    0.00       2         jpeg_add_quant_table [26]
+                0.00    0.00       2/1613        alloc_large [9]
+                0.00    0.00       1/27          alloc_barray [17]
+                0.00    0.00       1/15          validate_script [18]
+-----------------------------------------------
+                0.00    0.00       1/2           parse_switches.constprop.0 [149]
+                0.00    0.00       1/2           jpeg_write_scanlines [141]
+[27]     0.0    0.00    0.00       2         jpeg_destroy_compress [27]
+-----------------------------------------------
+                0.00    0.00       1/2           start_input_bmp [14]
+                0.00    0.00       1/2           read_scan_integer [158]
+[28]     0.0    0.00    0.00       2         jpeg_set_colorspace [28]
+                0.00    0.00       3/45          realize_virt_arrays [15]
+                0.00    0.00       2/2           per_scan_setup [30]
+-----------------------------------------------
+                0.00    0.00       1/2           start_input_bmp [14]
+                0.00    0.00       1/2           jinit_c_master_control [101]
+[29]     0.0    0.00    0.00       2         jpeg_set_defaults [29]
+                0.00    0.00       7/1613        alloc_large [9]
+                0.00    0.00       1/45          realize_virt_arrays [15]
+-----------------------------------------------
+                0.00    0.00       2/2           jpeg_set_colorspace [28]
+[30]     0.0    0.00    0.00       2         per_scan_setup [30]
+                0.00    0.00       4/7           access_virt_barray [19]
+-----------------------------------------------
+                0.00    0.00       1/1           jpeg_write_raw_data [140]
+[31]     0.0    0.00    0.00       1         compress_first_pass [31]
+                0.00    0.00    3975/4081        jinit_c_prep_controller [8]
+                0.00    0.00       1/45          realize_virt_arrays [15]
+-----------------------------------------------
+                0.00    0.00       1/1           jinit_downsampler [103]
+[32]     0.0    0.00    0.00       1         fill_dc_scans [32]
+                0.00    0.00       1/1           h2v2_downsample [35]
+-----------------------------------------------
+                0.00    0.00       1/1           set_sample_factors [41]
+[33]     0.0    0.00    0.00       1         fullsize_smooth_downsample [33]
+-----------------------------------------------
+                0.00    0.00       1/1           set_sample_factors [41]
+[34]     0.0    0.00    0.00       1         h2v1_downsample [34]
+-----------------------------------------------
+                0.00    0.00       1/1           fill_dc_scans [32]
+[35]     0.0    0.00    0.00       1         h2v2_downsample [35]
+                0.00    0.00       1/45          realize_virt_arrays [15]
+-----------------------------------------------
+                0.00    0.00       1/1           jpeg_set_quality [132]
+[36]     0.0    0.00    0.00       1         h2v2_smooth_downsample [36]
+                0.00    0.00       4/45          realize_virt_arrays [15]
+                0.00    0.00       3/6           __aeabi_uidiv [189]
+-----------------------------------------------
+                0.00    0.00       1/1           access_virt_barray [19]
+[37]     0.0    0.00    0.00       1         jinit_memory_mgr [37]
+                0.00    0.00       2/3           access_virt_sarray [24]
+                0.00    0.00       1/22          _fini [188]
+-----------------------------------------------
+                0.00    0.00       1/1           read_quant_tables [156]
+[38]     0.0    0.00    0.00       1         jpeg_start_compress [38]
+-----------------------------------------------
+                0.00    0.00       1/1           jpeg_set_quality [132]
+[39]     0.0    0.00    0.00       1         pre_process_context [39]
+                0.00    0.00       6/6           pre_process_data [21]
+-----------------------------------------------
+                0.00    0.00       1/1           start_input_bmp [14]
+[40]     0.0    0.00    0.00       1         process_data_simple_main [40]
+                0.00    0.00       1/45          realize_virt_arrays [15]
+-----------------------------------------------
+                0.00    0.00       1/1           read_quant_tables [156]
+[41]     0.0    0.00    0.00       1         set_sample_factors [41]
+                0.00    0.00       2/45          realize_virt_arrays [15]
+                0.00    0.00       2/5           encode_mcu_huff [23]
+                0.00    0.00       1/1           fullsize_smooth_downsample [33]
+                0.00    0.00       1/577         emit_eobrun [11]
+                0.00    0.00       1/1           h2v1_downsample [34]
+-----------------------------------------------
+                0.00    0.00       1/1           write_scan_header [43]
+[42]     0.0    0.00    0.00       1         term_destination [42]
+                0.00    0.00       1/45          realize_virt_arrays [15]
+-----------------------------------------------
+                0.00    0.00       1/1           jinit_c_master_control [101]
+[43]     0.0    0.00    0.00       1         write_scan_header [43]
+                0.00    0.00       1/1           term_destination [42]
+-----------------------------------------------
+                0.00    0.00       1/1           read_scan_integer [158]
+[44]     0.0    0.00    0.00       1         write_stdout [44]
+-----------------------------------------------
+                0.00    0.00       1/22          access_virt_barray [19]
+                0.00    0.00       1/22          jinit_memory_mgr [37]
+                0.00    0.00       2/22          __libc_csu_init [190]
+                0.00    0.00       6/22          jpeg_mem_term [128]
+                0.00    0.00      12/22          access_virt_sarray [24]
+[188]    0.0    0.00    0.00      22         _fini [188]
+-----------------------------------------------
+                0.00    0.00       1/6           jpeg_write_raw_data [140]
+                0.00    0.00       2/6           encode_mcu_DC_refine [12]
+                0.00    0.00       3/6           h2v2_smooth_downsample [36]
+[189]    0.0    0.00    0.00       6         __aeabi_uidiv [189]
+                0.00    0.00       5/45          realize_virt_arrays [15]
+                0.00    0.00       5/6           jpeg_free_large [20]
+-----------------------------------------------
+                0.00    0.00       1/1           start_input_bmp [14]
+[190]    0.0    0.00    0.00       1         __libc_csu_init [190]
+                0.00    0.00       2/22          _fini [188]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+ [189] __aeabi_uidiv          [16] fullsize_downsample    [38] jpeg_start_compress
+ [190] __libc_csu_init        [33] fullsize_smooth_downsample [30] per_scan_setup
+ [188] _fini                  [34] h2v1_downsample        [39] pre_process_context
+  [19] access_virt_barray     [35] h2v2_downsample        [21] pre_process_data
+  [24] access_virt_sarray     [36] h2v2_smooth_downsample [40] process_data_simple_main
+  [17] alloc_barray            [8] jinit_c_prep_controller [15] realize_virt_arrays
+   [9] alloc_large            [13] jinit_color_converter  [22] set_quant_slots
+  [31] compress_first_pass    [37] jinit_memory_mgr       [41] set_sample_factors
+  [11] emit_eobrun            [25] jpeg_CreateCompress    [14] start_input_bmp
+   [2] encode_mcu_AC_first    [26] jpeg_add_quant_table   [10] start_pass_coef
+   [1] encode_mcu_DC_first    [27] jpeg_destroy_compress  [42] term_destination
+  [12] encode_mcu_DC_refine   [20] jpeg_free_large        [18] validate_script
+  [23] encode_mcu_huff         [7] jpeg_gen_optimal_table [43] write_scan_header
+  [32] fill_dc_scans          [28] jpeg_set_colorspace    [44] write_stdout
+   [5] finish_pass_gather     [29] jpeg_set_defaults
