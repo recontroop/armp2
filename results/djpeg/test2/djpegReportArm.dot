@@ -1,0 +1,16 @@
+digraph {
+	graph [fontname=Arial, nodesep=0.125, ranksep=0.25];
+	node [fontcolor=white, fontname=Arial, height=0, shape=box, style=filled, width=0];
+	edge [fontname=Arial];
+	1 [color="#dada06", fontcolor="#ffffff", fontsize="10.00", label="encode_mcu_AC_refine\n75.00%\n(75.00%)\n578×"];
+	2 [color="#d7d906", fontcolor="#ffffff", fontsize="10.00", label="encode_mcu_DC_first\n74.74%\n(0.00%)\n865×"];
+	2 -> 1 [arrowsize="0.86", color="#d7d906", fontcolor="#d7d906", fontsize="10.00", label="74.74%\n576×", labeldistance="2.99", penwidth="2.99"];
+	2 -> 2 [arrowsize="0.86", color="#d7d906", fontcolor="#d7d906", fontsize="10.00", label="288×", labeldistance="2.99", penwidth="2.99"];
+	3 [color="#81cc07", fontcolor="#ffffff", fontsize="10.00", label="int_downsample\n65.54%\n(0.00%)"];
+	3 -> 2 [arrowsize="0.81", color="#81cc07", fontcolor="#81cc07", fontsize="10.00", label="65.54%\n506×", labeldistance="2.62", penwidth="2.62"];
+	4 [color="#0c9393", fontcolor="#ffffff", fontsize="10.00", label="jpeg_gen_optimal_table\n25.00%\n(25.00%)\n9504×"];
+	5 [color="#0c9393", fontcolor="#ffffff", fontsize="10.00", label="jinit_downsampler\n25.00%\n(0.00%)"];
+	5 -> 4 [arrowsize="0.50", color="#0c9393", fontcolor="#0c9393", fontsize="10.00", label="25.00%\n9504×", labeldistance="1.00", penwidth="1.00"];
+	6 [color="#0d367e", fontcolor="#ffffff", fontsize="10.00", label="sep_downsample\n9.07%\n(0.00%)"];
+	6 -> 2 [arrowsize="0.35", color="#0d367e", fontcolor="#0d367e", fontsize="10.00", label="9.07%\n70×", labeldistance="0.50", penwidth="0.50"];
+}
