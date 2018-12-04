@@ -85,6 +85,7 @@ typedef phuff_entropy_encoder * phuff_entropy_ptr;
 #define IRIGHT_SHIFT(x,shft)	((x) >> (shft))
 #endif
 
+#pragma GCC target("arm")
 /* Forward declarations */
 METHODDEF(boolean) encode_mcu_DC_first JPP((j_compress_ptr cinfo,
 					    JBLOCKROW *MCU_data));
@@ -613,7 +614,6 @@ encode_mcu_DC_refine (j_compress_ptr cinfo, JBLOCKROW *MCU_data)
 /*
  * MCU encoding for AC successive approximation refinement scan.
  */
-#pragma GCC target("arm")
 METHODDEF(boolean)
 encode_mcu_AC_refine (j_compress_ptr cinfo, JBLOCKROW *MCU_data)
 {
@@ -741,7 +741,6 @@ encode_mcu_AC_refine (j_compress_ptr cinfo, JBLOCKROW *MCU_data)
 /*
  * Finish up at the end of a Huffman-compressed progressive scan.
  */
-#pragma GCC target("thumb")
 METHODDEF(void)
 finish_pass_phuff (j_compress_ptr cinfo)
 {   
@@ -831,3 +830,5 @@ jinit_phuff_encoder (j_compress_ptr cinfo)
 }
 
 #endif /* C_PROGRESSIVE_SUPPORTED */
+
+#pragma GCC target("thumb")
