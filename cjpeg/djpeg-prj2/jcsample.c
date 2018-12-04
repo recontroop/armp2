@@ -109,7 +109,7 @@ expand_right_edge (JSAMPARRAY image_data, int num_rows,
  *
  * In this version we simply downsample each component independently.
  */
-#pragma GCC target("arm")
+
 METHODDEF(void)
 sep_downsample (j_compress_ptr cinfo,
 		JSAMPIMAGE input_buf, JDIMENSION in_row_index,
@@ -127,7 +127,7 @@ sep_downsample (j_compress_ptr cinfo,
     (*downsample->methods[ci]) (cinfo, compptr, in_ptr, out_ptr);
   }
 }
-#pragma GCC target("thumb")
+
 
 /*
  * Downsample pixel values of a single component.
@@ -244,7 +244,6 @@ h2v1_downsample (j_compress_ptr cinfo, jpeg_component_info * compptr,
  * This version handles the standard case of 2:1 horizontal and 2:1 vertical,
  * without smoothing.
  */
-#pragma GCC target("arm")
 METHODDEF(void)
 h2v2_downsample (j_compress_ptr cinfo, jpeg_component_info * compptr,
 		 JSAMPARRAY input_data, JSAMPARRAY output_data)
@@ -278,7 +277,7 @@ h2v2_downsample (j_compress_ptr cinfo, jpeg_component_info * compptr,
     inrow += 2;
   }
 }
-#pragma GCC target("thumb")
+
 
 #ifdef INPUT_SMOOTHING_SUPPORTED
 

@@ -467,7 +467,7 @@ emit_restart (working_state * state, int restart_num)
   return TRUE;
 }
 
-#pragma GCC target("thumb")
+
 /*
  * Encode and output one MCU's worth of Huffman-compressed coefficients.
  */

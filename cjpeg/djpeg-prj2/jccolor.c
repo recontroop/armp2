@@ -125,7 +125,6 @@ rgb_ycc_start (j_compress_ptr cinfo)
  * can easily adjust the passed input_buf value to accommodate any row
  * offset required on that side.
  */
-#pragma GCC target("arm")
 METHODDEF(void)
 rgb_ycc_convert (j_compress_ptr cinfo,
 		 JSAMPARRAY input_buf, JSAMPIMAGE output_buf,
@@ -170,7 +169,7 @@ rgb_ycc_convert (j_compress_ptr cinfo,
     }
   }
 }
-#pragma GCC target("thumb")
+
 
 /**************** Cases other than RGB -> YCbCr **************/
 
