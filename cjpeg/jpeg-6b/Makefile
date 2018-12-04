@@ -20,10 +20,10 @@ manext = 1
 mandir = $(prefix)/man/man$(manext)
 
 # The name of your C compiler:
-CC= arm-linux-gnueabihf-gcc-6
+	CC= arm-linux-gnueabihf-gcc-6 -mthumb
 
 # You may need to adjust these cc options:
-CFLAGS= -O2  -I$(srcdir) -pg -marm
+CFLAGS= -O2  -I$(srcdir) -pg
 # Generally, we recommend defining any configuration symbols in jconfig.h,
 # NOT via -D switches here.
 # However, any special defines for ansi2knr.c may be included here:
