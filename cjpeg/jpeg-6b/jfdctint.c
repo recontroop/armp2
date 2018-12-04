@@ -135,7 +135,6 @@
 /*
  * Perform the forward DCT on one block of samples.
  */
-#pragma GCC target("arm")
 GLOBAL(void)
 jpeg_fdct_islow (DCTELEM * data)
 {

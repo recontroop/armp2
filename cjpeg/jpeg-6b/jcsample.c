@@ -244,7 +244,6 @@ h2v1_downsample (j_compress_ptr cinfo, jpeg_component_info * compptr,
  * This version handles the standard case of 2:1 horizontal and 2:1 vertical,
  * without smoothing.
  */
-#pragma GCC target("thumb")
 METHODDEF(void)
 h2v2_downsample (j_compress_ptr cinfo, jpeg_component_info * compptr,
 		 JSAMPARRAY input_data, JSAMPARRAY output_data)
