@@ -59,7 +59,7 @@ void init_fdct()
       c[i][j] = s * cos((PI/8.0)*i*(j+0.5));
   }
 }
-
+#pragma GCC target("thumb")
 void fdct(block)
 short *block;
 {
@@ -98,3 +98,4 @@ short *block;
        */
     }
 }
+#pragma GCC target("arm")
