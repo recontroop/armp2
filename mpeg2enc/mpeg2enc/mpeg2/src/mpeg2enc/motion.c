@@ -1246,6 +1246,7 @@ int *dmcp,*vmcp;
  *              result is given as half pel offset from ref(0,0)
  *              i.e. NOT relative to (i0,j0)
  */
+#pragma GCC target("thumb")
 static int fullsearch(org,ref,blk,lx,i0,j0,sx,sy,h,xmax,ymax,iminp,jminp)
 unsigned char *org,*ref,*blk;
 int lx,i0,j0,sx,sy,h,xmax,ymax;
@@ -1435,7 +1436,7 @@ int distlim;
 
   return s;
 }
-
+#pragma GCC target("arm")
 /*
  * total squared difference between two (16*h) blocks
  * including optional half pel interpolation of blk1 (hx,hy)
