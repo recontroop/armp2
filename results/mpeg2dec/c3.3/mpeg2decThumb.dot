@@ -1,0 +1,31 @@
+digraph {
+	graph [fontname=Arial, nodesep=0.125, ranksep=0.25];
+	node [fontcolor=white, fontname=Arial, height=0, shape=box, style=filled, width=0];
+	edge [fontname=Arial];
+	1 [color="#ff0000", fontcolor="#ffffff", fontsize="10.00", label="Decode_Picture\n100.00%\n(17.19%)"];
+	1 -> 4 [arrowsize="0.77", color="#4ec308", fontcolor="#4ec308", fontsize="10.00", label="59.37%\n8×", labeldistance="2.37", penwidth="2.37"];
+	1 -> 7 [arrowsize="0.35", color="#0d377f", fontcolor="#0d377f", fontsize="10.00", label="9.37%\n85536×", labeldistance="0.50", penwidth="0.50"];
+	1 -> 9 [arrowsize="0.35", color="#0d377f", fontcolor="#0d377f", fontsize="10.00", label="9.37%\n10712×", labeldistance="0.50", penwidth="0.50"];
+	1 -> 10 [arrowsize="0.35", color="#0d0e73", fontcolor="#0d0e73", fontsize="10.00", label="0.21%\n14212×", labeldistance="0.50", penwidth="0.50"];
+	1 -> 11 [arrowsize="0.35", color="#0d1a77", fontcolor="#0d1a77", fontsize="10.00", label="3.06%\n21264×", labeldistance="0.50", penwidth="0.50"];
+	1 -> 12 [arrowsize="0.35", color="#0d0f74", fontcolor="#0d0f74", fontsize="10.00", label="0.65%\n12160×", labeldistance="0.50", penwidth="0.50"];
+	2 [color="#4ec308", fontcolor="#ffffff", fontsize="10.00", label="store_one\n59.37%\n(0.00%)\n9×"];
+	2 -> 3 [arrowsize="0.77", color="#4ec308", fontcolor="#4ec308", fontsize="10.00", label="59.37%\n9×", labeldistance="2.37", penwidth="2.37"];
+	3 [color="#4ec308", fontcolor="#ffffff", fontsize="10.00", label="store_ppm_tga\n59.37%\n(21.87%)\n9×"];
+	3 -> 5 [arrowsize="0.45", color="#0c758d", fontcolor="#0c758d", fontsize="10.00", label="20.31%\n2691×", labeldistance="0.81", penwidth="0.81"];
+	3 -> 6 [arrowsize="0.41", color="#0c6289", fontcolor="#0c6289", fontsize="10.00", label="17.19%\n18×", labeldistance="0.69", penwidth="0.69"];
+	4 [color="#4ec308", fontcolor="#ffffff", fontsize="10.00", label="Write_Frame\n59.37%\n(0.00%)\n8×"];
+	4 -> 2 [arrowsize="0.77", color="#4ec308", fontcolor="#4ec308", fontsize="10.00", label="59.37%\n9×", labeldistance="2.37", penwidth="2.37"];
+	5 [color="#0c758d", fontcolor="#ffffff", fontsize="10.00", label="conv420to422\n20.31%\n(20.31%)\n2691×"];
+	6 [color="#0c6289", fontcolor="#ffffff", fontsize="10.00", label="conv422to444\n17.19%\n(17.19%)\n18×"];
+	7 [color="#0d377f", fontcolor="#ffffff", fontsize="10.00", label="Fast_IDCT\n9.37%\n(9.37%)\n85536×"];
+	8 [color="#0d377f", fontcolor="#ffffff", fontsize="10.00", label="form_component_prediction\n9.37%\n(9.37%)\n122280×"];
+	8 -> 8 [arrowsize="0.35", color="#0d377f", fontcolor="#0d377f", fontsize="10.00", label="61140×", labeldistance="0.50", penwidth="0.50"];
+	9 [color="#0d377f", fontcolor="#ffffff", fontsize="10.00", label="form_predictions\n9.37%\n(0.00%)\n10712×"];
+	9 -> 8 [arrowsize="0.35", color="#0d377f", fontcolor="#0d377f", fontsize="10.00", label="9.37%\n61140×", labeldistance="0.50", penwidth="0.50"];
+	10 [color="#0d1a77", fontcolor="#ffffff", fontsize="10.00", label="Show_Bits\n3.12%\n(3.12%)\n210144×"];
+	11 [color="#0d1a77", fontcolor="#ffffff", fontsize="10.00", label="Decode_MPEG2_Intra_Block\n3.06%\n(1.56%)\n21264×"];
+	11 -> 10 [arrowsize="0.35", color="#0d1274", fontcolor="#0d1274", fontsize="10.00", label="1.18%\n79263×", labeldistance="0.50", penwidth="0.50"];
+	12 [color="#0d0f74", fontcolor="#ffffff", fontsize="10.00", label="Decode_MPEG2_Non_Intra_Block\n0.65%\n(0.00%)\n12160×"];
+	12 -> 10 [arrowsize="0.35", color="#0d0f74", fontcolor="#0d0f74", fontsize="10.00", label="0.65%\n43588×", labeldistance="0.50", penwidth="0.50"];
+}

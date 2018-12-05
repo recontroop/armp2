@@ -1,0 +1,23 @@
+digraph {
+	graph [fontname=Arial, nodesep=0.125, ranksep=0.25];
+	node [fontcolor=white, fontname=Arial, height=0, shape=box, style=filled, width=0];
+	edge [fontname=Arial];
+	1 [color="#ff0000", fontcolor="#ffffff", fontsize="10.00", label="Decode_Picture\n100.00%\n(11.11%)"];
+	1 -> 4 [arrowsize="0.77", color="#49c208", fontcolor="#49c208", fontsize="10.00", label="58.73%\n8×", labeldistance="2.35", penwidth="2.35"];
+	1 -> 5 [arrowsize="0.47", color="#0c8190", fontcolor="#0c8190", fontsize="10.00", label="22.22%\n10712×", labeldistance="0.89", penwidth="0.89"];
+	1 -> 9 [arrowsize="0.35", color="#0d307d", fontcolor="#0d307d", fontsize="10.00", label="7.94%\n85536×", labeldistance="0.50", penwidth="0.50"];
+	2 [color="#49c208", fontcolor="#ffffff", fontsize="10.00", label="store_one\n58.73%\n(0.00%)\n9×"];
+	2 -> 3 [arrowsize="0.77", color="#49c208", fontcolor="#49c208", fontsize="10.00", label="58.73%\n9×", labeldistance="2.35", penwidth="2.35"];
+	3 [color="#49c208", fontcolor="#ffffff", fontsize="10.00", label="store_ppm_tga\n58.73%\n(20.63%)\n9×"];
+	3 -> 7 [arrowsize="0.45", color="#0c778e", fontcolor="#0c778e", fontsize="10.00", label="20.63%\n2691×", labeldistance="0.83", penwidth="0.83"];
+	3 -> 8 [arrowsize="0.42", color="#0c6489", fontcolor="#0c6489", fontsize="10.00", label="17.46%\n18×", labeldistance="0.70", penwidth="0.70"];
+	4 [color="#49c208", fontcolor="#ffffff", fontsize="10.00", label="Write_Frame\n58.73%\n(0.00%)\n8×"];
+	4 -> 2 [arrowsize="0.77", color="#49c208", fontcolor="#49c208", fontsize="10.00", label="58.73%\n9×", labeldistance="2.35", penwidth="2.35"];
+	5 [color="#0c8190", fontcolor="#ffffff", fontsize="10.00", label="form_predictions\n22.22%\n(1.59%)\n10712×"];
+	5 -> 6 [arrowsize="0.45", color="#0c778e", fontcolor="#0c778e", fontsize="10.00", label="20.63%\n61140×", labeldistance="0.83", penwidth="0.83"];
+	6 [color="#0c778e", fontcolor="#ffffff", fontsize="10.00", label="form_component_prediction\n20.63%\n(20.63%)\n122280×"];
+	6 -> 6 [arrowsize="0.45", color="#0c778e", fontcolor="#0c778e", fontsize="10.00", label="61140×", labeldistance="0.83", penwidth="0.83"];
+	7 [color="#0c778e", fontcolor="#ffffff", fontsize="10.00", label="conv420to422\n20.63%\n(20.63%)\n2691×"];
+	8 [color="#0c6489", fontcolor="#ffffff", fontsize="10.00", label="conv422to444\n17.46%\n(17.46%)\n18×"];
+	9 [color="#0d307d", fontcolor="#ffffff", fontsize="10.00", label="Fast_IDCT\n7.94%\n(7.94%)\n85536×"];
+}
