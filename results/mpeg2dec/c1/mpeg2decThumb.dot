@@ -1,0 +1,36 @@
+digraph {
+	graph [fontname=Arial, nodesep=0.125, ranksep=0.25];
+	node [fontcolor=white, fontname=Arial, height=0, shape=box, style=filled, width=0];
+	edge [fontname=Arial];
+	1 [color="#ff0000", fontcolor="#ffffff", fontsize="10.00", label="Decode_Picture\n100.00%\n(17.91%)"];
+	1 -> 4 [arrowsize="0.76", color="#45c108", fontcolor="#45c108", fontsize="10.00", label="58.21%\n8×", labeldistance="2.33", penwidth="2.33"];
+	1 -> 7 [arrowsize="0.35", color="#0d357e", fontcolor="#0d357e", fontsize="10.00", label="8.96%\n85536×", labeldistance="0.50", penwidth="0.50"];
+	1 -> 9 [arrowsize="0.35", color="#0d2e7c", fontcolor="#0d2e7c", fontsize="10.00", label="7.46%\n10712×", labeldistance="0.50", penwidth="0.50"];
+	1 -> 10 [arrowsize="0.35", color="#0d1d78", fontcolor="#0d1d78", fontsize="10.00", label="3.82%\n21264×", labeldistance="0.50", penwidth="0.50"];
+	1 -> 12 [arrowsize="0.35", color="#0d1475", fontcolor="#0d1475", fontsize="10.00", label="1.73%\n14447×", labeldistance="0.50", penwidth="0.50"];
+	1 -> 15 [arrowsize="0.35", color="#0d1375", fontcolor="#0d1375", fontsize="10.00", label="1.49%\n13897×", labeldistance="0.50", penwidth="0.50"];
+	2 [color="#45c108", fontcolor="#ffffff", fontsize="10.00", label="store_one\n58.21%\n(0.00%)\n9×"];
+	2 -> 3 [arrowsize="0.76", color="#45c108", fontcolor="#45c108", fontsize="10.00", label="58.21%\n9×", labeldistance="2.33", penwidth="2.33"];
+	3 [color="#45c108", fontcolor="#ffffff", fontsize="10.00", label="store_ppm_tga\n58.21%\n(17.91%)\n9×"];
+	3 -> 5 [arrowsize="0.46", color="#0c798e", fontcolor="#0c798e", fontsize="10.00", label="20.90%\n2691×", labeldistance="0.84", penwidth="0.84"];
+	3 -> 6 [arrowsize="0.44", color="#0c6f8c", fontcolor="#0c6f8c", fontsize="10.00", label="19.40%\n18×", labeldistance="0.78", penwidth="0.78"];
+	4 [color="#45c108", fontcolor="#ffffff", fontsize="10.00", label="Write_Frame\n58.21%\n(0.00%)\n8×"];
+	4 -> 2 [arrowsize="0.76", color="#45c108", fontcolor="#45c108", fontsize="10.00", label="58.21%\n9×", labeldistance="2.33", penwidth="2.33"];
+	5 [color="#0c798e", fontcolor="#ffffff", fontsize="10.00", label="conv420to422\n20.90%\n(20.90%)\n2691×"];
+	6 [color="#0c6f8c", fontcolor="#ffffff", fontsize="10.00", label="conv422to444\n19.40%\n(19.40%)\n18×"];
+	7 [color="#0d357e", fontcolor="#ffffff", fontsize="10.00", label="Fast_IDCT\n8.96%\n(8.96%)\n85536×"];
+	8 [color="#0d2e7c", fontcolor="#ffffff", fontsize="10.00", label="form_component_prediction\n7.46%\n(7.46%)\n122280×"];
+	8 -> 8 [arrowsize="0.35", color="#0d2e7c", fontcolor="#0d2e7c", fontsize="10.00", label="61140×", labeldistance="0.50", penwidth="0.50"];
+	9 [color="#0d2e7c", fontcolor="#ffffff", fontsize="10.00", label="form_predictions\n7.46%\n(0.00%)\n10712×"];
+	9 -> 8 [arrowsize="0.35", color="#0d2e7c", fontcolor="#0d2e7c", fontsize="10.00", label="7.46%\n61140×", labeldistance="0.50", penwidth="0.50"];
+	10 [color="#0d1d78", fontcolor="#ffffff", fontsize="10.00", label="Decode_MPEG2_Intra_Block\n3.82%\n(2.99%)\n21264×"];
+	10 -> 13 [arrowsize="0.35", color="#0d0f74", fontcolor="#0d0f74", fontsize="10.00", label="0.65%\n58138×", labeldistance="0.50", penwidth="0.50"];
+	11 [color="#0d1475", fontcolor="#ffffff", fontsize="10.00", label="motion_vector\n1.73%\n(1.49%)\n14447×"];
+	11 -> 13 [arrowsize="0.35", color="#0d0e73", fontcolor="#0d0e73", fontsize="10.00", label="0.24%\n21345×", labeldistance="0.50", penwidth="0.50"];
+	12 [color="#0d1475", fontcolor="#ffffff", fontsize="10.00", label="motion_vectors\n1.73%\n(0.00%)\n14447×"];
+	12 -> 11 [arrowsize="0.35", color="#0d1475", fontcolor="#0d1475", fontsize="10.00", label="1.73%\n14447×", labeldistance="0.50", penwidth="0.50"];
+	13 [color="#0d1375", fontcolor="#ffffff", fontsize="10.00", label="Get_Bits\n1.49%\n(1.49%)\n133799×"];
+	14 [color="#0d1375", fontcolor="#ffffff", fontsize="10.00", label="Get_macroblock_type\n1.49%\n(1.49%)\n13897×"];
+	15 [color="#0d1375", fontcolor="#ffffff", fontsize="10.00", label="macroblock_modes\n1.49%\n(0.00%)\n13897×"];
+	15 -> 14 [arrowsize="0.35", color="#0d1375", fontcolor="#0d1375", fontsize="10.00", label="1.49%\n13897×", labeldistance="0.50", penwidth="0.50"];
+}
