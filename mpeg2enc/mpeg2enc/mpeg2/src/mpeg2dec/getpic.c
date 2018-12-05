@@ -67,6 +67,7 @@ static int decode_macroblock _ANSI_ARGS_((int *macroblock_type,
   int motion_vertical_field_select[2][2], int dmvector[2]));
 
 
+#pragma GCC target("arm")
 /* decode one frame or field picture */
 void Decode_Picture(bitstream_framenum, sequence_framenum)
 int bitstream_framenum, sequence_framenum;
@@ -112,6 +113,7 @@ int bitstream_framenum, sequence_framenum;
     Second_Field = !Second_Field;
 }
 
+#pragma GCC target("thumb")
 
 /* decode all macroblocks of the current picture */
 /* stages described in ISO/IEC 13818-2 section 7 */

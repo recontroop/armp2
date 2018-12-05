@@ -251,6 +251,7 @@ int offset, incr, height;
 /*
  * store as PPM (PBMPLUS) or uncompressed Truevision TGA ('Targa') file
  */
+#pragma GCC target("arm")
 static void store_ppm_tga(outname,src,offset,incr,height,tgaflag)
 char *outname;
 unsigned char *src[];
@@ -464,6 +465,7 @@ unsigned char *src,*dst;
   }
 }
 
+#pragma GCC target("thumb")
 /* vertical 1:2 interpolation filter */
 static void conv420to422(src,dst)
 unsigned char *src,*dst;
