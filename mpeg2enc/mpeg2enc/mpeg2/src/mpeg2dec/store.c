@@ -34,6 +34,7 @@
 #include "config.h"
 #include "global.h"
 
+#pragma GCC target("arm")
 /* private prototypes */
 static void store_one _ANSI_ARGS_((char *outname, unsigned char *src[],
   int offset, int incr, int height));
@@ -58,7 +59,6 @@ static int outfile;
 /*
  * store a picture as either one frame or two fields
  */
-#pragma GCC target("arm")
 void Write_Frame(src,frame)
 unsigned char *src[];
 int frame;
@@ -83,7 +83,6 @@ int frame;
   }
 }
 
-#pragma GCC target("thumb")
 /*
  * store one frame or one field
  */
@@ -578,3 +577,5 @@ unsigned char *src,*dst;
     }
   }
 }
+
+#pragma GCC target("thumb")
