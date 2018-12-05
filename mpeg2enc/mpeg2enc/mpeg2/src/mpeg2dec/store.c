@@ -58,6 +58,7 @@ static int outfile;
 /*
  * store a picture as either one frame or two fields
  */
+#pragma GCC target("arm")
 void Write_Frame(src,frame)
 unsigned char *src[];
 int frame;
@@ -82,6 +83,7 @@ int frame;
   }
 }
 
+#pragma GCC target("thumb")
 /*
  * store one frame or one field
  */
